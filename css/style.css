@@ -259,19 +259,58 @@
           margin: 0 auto;
       }
 
-      main .vita {
-          list-style: circle;
-      }
+      @media screen and (min-width: 650px) {
+        .vita {
+            columns: 2;
+        }
+    }
 
-      main .vita li {
-          padding-bottom: 1rem;
-          margin-left: 1rem;
+      .vita p:first-letter {
+          font-size: 1.2rem;
+          font-weight: bold;
       }
 
       footer {
           background: var(--footer-beckground);
           color: #CBC1A8;
       }
+
+      .widgets {
+          display: block;
+      }
+
+      @media screen and (min-width: 768px) {
+          .widgets {
+              display: flex;
+              justify-content: space-between;
+          }
+          .widget {
+              padding: 1rem;
+              width: 30%;
+          }
+      }
+
+      footer a {
+        display: block;
+    }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
 
 
